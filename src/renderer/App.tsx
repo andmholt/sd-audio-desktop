@@ -1,50 +1,75 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
-import './App.css';
+import {
+  HashRouter,
+  Route,
+  Routes,
+} from 'react-router-dom'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 
-function Hello() {
-  return (
-    <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
-      </div>
-    </div>
-  );
-}
+// components
+import Dash from './components/Dash'
+import Login from './components/Login'
 
 export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Hello />} />
-      </Routes>
-    </Router>
-  );
+
+	// ===== theme =====
+	const lightTheme = createTheme({
+		palette: {
+			primary: {
+				main: '#19446e',
+				light: '#e4f0f5',
+			},
+			secondary: {
+				dark: '#431c00',
+				main: '#6e4419',
+				light: '#a97f58'
+			},
+			background: {
+				default: 'white'
+			},
+			success: {
+				dark: '#388e3c',
+				main: '#66bb6a',
+				light: '#81c784',
+			}
+		}
+	})
+	const darkTheme = createTheme({
+		palette: {
+			primary: {
+				main: '#19446e',
+				light: '#e4f0f5',
+			},
+			secondary: {
+				dark: '#431c00',
+				main: '#6e4419',
+				light: '#a97f58'
+			},
+			background: {
+				default: '#292929',
+			},
+			success: {
+				dark: '#388e3c',
+				main: '#66bb6a',
+				light: '#81c784',
+			}
+		}
+	})
+
+    return (
+		<div style={{ width: '100%', height: '100%', position: 'absolute', padding: 0, top: 0, left: 0 }}>
+			<ThemeProvider theme={lightTheme}>
+				<HashRouter>
+					<Routes>
+
+						{/* Dash */}
+						<Route path='/' element={<Dash />} />
+
+						{/* Login */}
+						<Route path='/login' element={<Login />} />
+
+					</Routes>
+				</HashRouter>
+			</ThemeProvider>
+		</div>
+    )
 }
