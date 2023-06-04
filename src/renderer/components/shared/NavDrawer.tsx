@@ -36,6 +36,7 @@ const NavDrawer = () => {
             sx={{'& .MuiDrawer-paper': {
                 // backgroundColor: '#141414'
             }}}
+            style={{display: 'flex'}}
         >
             <DrawerHeader>
                 <div style={{width: '100%', paddingLeft: '10px'}}>
@@ -65,17 +66,17 @@ const NavDrawer = () => {
                         <ListItemText primary='My Library' />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding>
+                {/* <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
                             <PublicIcon />
                         </ListItemIcon>
                         <ListItemText primary='Community' />
                     </ListItemButton>
-                </ListItem>
+                </ListItem> */}
             </List>
 
-            <Divider />
+            <div style={{flexGrow: 1}} />
 
             <List style={{zIndex: 5}}>
                 {/* <ListItem disablePadding>
