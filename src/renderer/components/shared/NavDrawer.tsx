@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
     Divider,
     Drawer,
@@ -31,12 +33,20 @@ const ListItem = styled(MuiListItem)(({theme}) =>({
 }))
 
 const NavDrawer = () => {
+
+    // ===== navigate =====
+    const navigate = useNavigate()
+
+    // ===== location =====
+    const location = useLocation()
+
     return (
-        <Drawer variant='permanent' anchor='left'
+        <Drawer variant='persistent' anchor='left' open={true}
             sx={{'& .MuiDrawer-paper': {
+                width: '175px',
                 // backgroundColor: '#141414'
             }}}
-            style={{display: 'flex'}}
+            style={{display: 'flex', boxSizing: 'border-box'}}
         >
             <DrawerHeader>
                 <div style={{width: '100%', paddingLeft: '10px'}}>
@@ -51,15 +61,16 @@ const NavDrawer = () => {
 
             <List style={{zIndex: 5}}>
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton selected={location.pathname==='/generate'} onClick={() => navigate('/generate')}>
                         <ListItemIcon>
                             <GraphicEqIcon />
                         </ListItemIcon>
                         <ListItemText primary='Generate' />
                     </ListItemButton>
                 </ListItem>
+
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton selected={location.pathname==='/library'} onClick={() => navigate('/library')}>
                         <ListItemIcon>
                             <LibraryMusicIcon />
                         </ListItemIcon>

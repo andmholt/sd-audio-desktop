@@ -8,6 +8,8 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 // components
 import Dash from './components/Dash'
 import Login from './components/Login'
+import Generate from './components/Generate'
+import Library from './components/Library'
 
 export default function App() {
 
@@ -15,8 +17,9 @@ export default function App() {
 	const lightTheme = createTheme({
 		palette: {
 			primary: {
-				main: '#19446e',
-				light: '#e4f0f5',
+				dark: '#3c096c',
+				main: '#7b2cbf',
+				light: '#e0aaff',
 			},
 			secondary: {
 				dark: '#431c00',
@@ -56,7 +59,7 @@ export default function App() {
 	})
 
     return (
-		<div style={{ width: '100%', height: '100%', position: 'absolute', padding: 0, top: 0, left: 0 }}>
+		<div style={{display: 'flex', width: '100%', height: '100%', position: 'absolute', padding: 0, top: 0, left: 0}}>
 			<ThemeProvider theme={lightTheme}>
 				<HashRouter>
 					<Routes>
@@ -66,6 +69,12 @@ export default function App() {
 
 						{/* Login */}
 						<Route path='/login' element={<Login />} />
+
+						{/* Generate */}
+						<Route path='/generate' element={<Generate />} />
+
+						{/* Library */}
+						<Route path='/library' element={<Library />} />
 
 					</Routes>
 				</HashRouter>
