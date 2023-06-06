@@ -8,7 +8,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 // components
 import Dash from './components/Dash'
 import Login from './components/Login'
-import Generate from './components/Generate'
+import Generate from './components/Machines/Generate'
 import Library from './components/Library'
 
 export default function App() {

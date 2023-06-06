@@ -65,18 +65,19 @@ const NavDrawer = () => {
                         <ListItemIcon>
                             <GraphicEqIcon />
                         </ListItemIcon>
-                        <ListItemText primary='Generate' />
+                        <ListItemText primary='Machines' />
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem disablePadding>
+                {/* <ListItem disablePadding>
                     <ListItemButton selected={location.pathname==='/library'} onClick={() => navigate('/library')}>
                         <ListItemIcon>
                             <LibraryMusicIcon />
                         </ListItemIcon>
                         <ListItemText primary='My Library' />
                     </ListItemButton>
-                </ListItem>
+                </ListItem> */}
+                
                 {/* <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
