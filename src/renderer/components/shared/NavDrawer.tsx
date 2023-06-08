@@ -19,6 +19,8 @@ import {
     // Widgets as WidgetsIcon,
 } from '@mui/icons-material'
 
+import samplrLogo from '../../assets/imgs/samplr_basic_gray.png'
+
 // mui
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -49,8 +51,8 @@ const NavDrawer = () => {
             style={{display: 'flex', boxSizing: 'border-box'}}
         >
             <DrawerHeader>
-                <div style={{width: '100%', paddingLeft: '10px'}}>
-                    Logo
+                <div style={{width: '100%', padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    {/* <img alt='' src={samplrLogo} style={{width: '100%', height: '100%', objectFit: 'contain'}} /> */}
                 </div>
                 {/* <IconButton> */}
                     {/* <ChevronLeftIcon /> */}
@@ -65,18 +67,18 @@ const NavDrawer = () => {
                         <ListItemIcon>
                             <GraphicEqIcon />
                         </ListItemIcon>
-                        <ListItemText primary='Machines' />
+                        <ListItemText primary='Samplrs' />
                     </ListItemButton>
                 </ListItem>
 
-                {/* <ListItem disablePadding>
+                <ListItem disablePadding>
                     <ListItemButton selected={location.pathname==='/library'} onClick={() => navigate('/library')}>
                         <ListItemIcon>
                             <LibraryMusicIcon />
                         </ListItemIcon>
-                        <ListItemText primary='My Library' />
+                        <ListItemText primary='Library' />
                     </ListItemButton>
-                </ListItem> */}
+                </ListItem>
                 
                 {/* <ListItem disablePadding>
                     <ListItemButton>

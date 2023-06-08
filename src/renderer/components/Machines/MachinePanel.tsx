@@ -30,7 +30,7 @@ const MachinePanel = () => {
         <PanelBkg>
 
             {/* Machine */}
-            <InputLabel>Machine</InputLabel>
+            <InputLabel>Samplr</InputLabel>
             <FormControl fullWidth size='small'>
                 <Select
                     variant='outlined'

@@ -9,7 +9,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import Dash from './components/Dash'
 import Login from './components/Login'
 import Generate from './components/Machines/Generate'
-import Library from './components/Library'
+import Library from './components/Library/Library'
 
 export default function App() {
 

@@ -26,6 +26,8 @@ import NavDrawer from '../shared/NavDrawer'
 import GeneratedSample from './GeneratedSample'
 import GeneratedSampleV2 from './GeneratedSampleV2'
 
+import samplrLogo from '../../assets/imgs/samplr_basic_gray.png'
+
 const ListBkgd = styled('div')(({theme}) => ({
     backgroundColor: '#F5F5F5',
     height: '100%',
@@ -89,6 +91,7 @@ const Generate = () => {
                     </div>
                     <Divider orientation='vertical' />
                     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '200px', boxSizing: 'border-box', padding: '10px'}}>
+                        {/* <img style={{width: '60%', height: '100%', boxSizing: 'border-box', objectFit: 'contain'}} alt='' src={samplrLogo} /> */}
                     </div>
                 </div>
 
